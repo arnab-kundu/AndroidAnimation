@@ -17,7 +17,7 @@
 package edward.com.example;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,7 +34,7 @@ import edward.com.animation.effects.Slide;
 import edward.com.example.adapter.DirectionType;
 import edward.com.example.adapter.MyListAdapter;
 
-public class ListViewActivity extends ActionBarActivity {
+public class ListViewActivity extends AppCompatActivity {
 
     private ListView listView;
     private List<String> data = new ArrayList<>();

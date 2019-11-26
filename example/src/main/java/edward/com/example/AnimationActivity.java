@@ -20,7 +20,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
@@ -52,7 +52,7 @@ import edward.com.animation.viewpager.EffectTransformer;
 import edward.com.example.adapter.DirectionType;
 import edward.com.example.adapter.PagerType;
 
-public class AnimationActivity extends ActionBarActivity {
+public class AnimationActivity extends AppCompatActivity {
 
     private ViewPager pager;
     @Override

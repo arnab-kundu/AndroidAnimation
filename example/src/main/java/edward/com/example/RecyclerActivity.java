@@ -18,7 +18,7 @@
 package edward.com.example;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -37,7 +37,7 @@ import edward.com.example.adapter.DirectionType;
 import edward.com.example.adapter.RecyclerAdapter;
 import edward.com.recyclerview.RecyclerAdapterDecorator;
 
-public class RecyclerActivity extends ActionBarActivity {
+public class RecyclerActivity extends AppCompatActivity {
 
     private List<String> data = new ArrayList<>();
 

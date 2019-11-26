@@ -17,6 +17,8 @@
 package edward.com.recyclerview;
 
 import android.animation.Animator;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 
 import edward.com.animation.AnimatorManager;

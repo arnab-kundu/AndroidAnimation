@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 28
+    //buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "edward.com.example"
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
@@ -20,12 +20,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:support-v4:21.0.3'
-    compile project(':animation-core')
-    compile 'com.android.support:appcompat-v7:21.0.3'
-    compile project(':animation-abslistview')
-    compile 'com.android.support:recyclerview-v7:21.0.3'
-    compile 'com.squareup.picasso:picasso:2.4.0'
-    compile project(':animation-recyclerview')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation project(':animation-core')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation project(':animation-abslistview')
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+    implementation project(':animation-recyclerview')
 }
