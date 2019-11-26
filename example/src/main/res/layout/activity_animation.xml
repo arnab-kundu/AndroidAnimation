@@ -6,14 +6,12 @@
     tools:context=".AnimationActivity">
 
     <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#3DC49D"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/PopupMenu">
+        android:minHeight="?attr/actionBarSize">
 
         <Spinner
             android:id="@+id/spinner"

@@ -191,7 +191,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
     protected void preAnimateAdd(final RecyclerView.ViewHolder holder) {
     }
 
-    @Override
+
     public boolean animateRemove(final ViewHolder holder) {
         endAnimation(holder);
         preAnimateRemove(holder);
@@ -199,7 +199,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
         return true;
     }
 
-    @Override
+
     public boolean animateAdd(final ViewHolder holder) {
         //endAnimation(holder);
         //preAnimateAdd(holder);
@@ -207,7 +207,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
         return true;
     }
 
-    @Override
+
     public boolean animateMove(final ViewHolder holder, int fromX, int fromY,
             int toX, int toY) {
         final View view = holder.itemView;
@@ -217,7 +217,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
         int deltaX = toX - fromX;
         int deltaY = toY - fromY;
         if (deltaX == 0 && deltaY == 0) {
-            dispatchMoveFinished(holder);
+            //dispatchMoveFinished(holder);
             return false;
         }
         if (deltaX != 0) {
@@ -248,7 +248,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
         animation.setDuration(getMoveDuration()).setListener(new VpaListenerAdapter() {
             @Override
             public void onAnimationStart(Animator animator) {
-                dispatchMoveStarting(holder);
+                //dispatchMoveStarting(holder);
             }
 
             @Override
@@ -268,14 +268,14 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             @Override
             public void onAnimationEnd(Animator animator) {
                 animation.setListener(null);
-                dispatchMoveFinished(holder);
+                //dispatchMoveFinished(holder);
                 mMoveAnimations.remove(holder);
                 dispatchFinishedWhenDone();
             }
         }).start();
     }
 
-    @Override
+
     public boolean animateChange(ViewHolder oldHolder, ViewHolder newHolder,
             int fromX, int fromY, int toX, int toY) {
         final float prevTranslationX = oldHolder.itemView.getTranslationX();
@@ -313,7 +313,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             oldViewAnim.alpha(0).setListener(new VpaListenerAdapter() {
                 @Override
                 public void onAnimationStart(Animator animation) {
-                    dispatchChangeStarting(changeInfo.oldHolder, true);
+                    //dispatchChangeStarting(changeInfo.oldHolder, true);
                 }
 
                 @Override
@@ -326,7 +326,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                     mView.setAlpha(1);
                     mView.setTranslationX(0);
                     mView.setTranslationY(0);
-                    dispatchChangeFinished(changeInfo.oldHolder, true);
+                    //dispatchChangeFinished(changeInfo.oldHolder, true);
                     mChangeAnimations.remove(changeInfo.oldHolder);
                     dispatchFinishedWhenDone();
                 }
@@ -340,7 +340,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                     alpha(1).setListener(new VpaListenerAdapter() {
                 @Override
                 public void onAnimationStart(Animator view) {
-                    dispatchChangeStarting(changeInfo.newHolder, false);
+                    //dispatchChangeStarting(changeInfo.newHolder, false);
                 }
 
                 @Override
@@ -349,7 +349,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                     newView.setAlpha(1);
                     newView.setTranslationX(0);
                     newView.setTranslationY(0);
-                    dispatchChangeFinished(changeInfo.newHolder, false);
+                    //dispatchChangeFinished(changeInfo.newHolder, false);
                     mChangeAnimations.remove(changeInfo.newHolder);
                     dispatchFinishedWhenDone();
                 }
@@ -390,7 +390,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
         item.itemView.setAlpha(1);
         item.itemView.setTranslationX(0);
         item.itemView.setTranslationY(0);
-        dispatchChangeFinished(item, oldItem);
+        //dispatchChangeFinished(item, oldItem);
         return true;
     }
 
@@ -405,18 +405,18 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             if (moveInfo.holder == item) {
                 view.setTranslationY(0);
                 view.setTranslationX(0);
-                dispatchMoveFinished(item);
+                //dispatchMoveFinished(item);
                 mPendingMoves.remove(i);
             }
         }
         endChangeAnimation(mPendingChanges, item);
         if (mPendingRemovals.remove(item)) {
             reset(item.itemView);
-            dispatchRemoveFinished(item);
+            //dispatchRemoveFinished(item);
         }
         if (mPendingAdditions.remove(item)) {
             reset(item.itemView);
-            dispatchAddFinished(item);
+            //dispatchAddFinished(item);
         }
 
         for (int i = mChangesList.size() - 1; i >= 0; i--) {
@@ -433,7 +433,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                 if (moveInfo.holder == item) {
                     view.setTranslationY(0);
                     view.setTranslationX(0);
-                    dispatchMoveFinished(item);
+                    //dispatchMoveFinished(item);
                     moves.remove(j);
                     if (moves.isEmpty()) {
                         mMovesList.remove(i);
@@ -446,7 +446,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             ArrayList<ViewHolder> additions = mAdditionsList.get(i);
             if (additions.remove(item)) {
                 reset(item.itemView);
-                dispatchAddFinished(item);
+                //dispatchAddFinished(item);
                 if (additions.isEmpty()) {
                     mAdditionsList.remove(i);
                 }
@@ -510,13 +510,13 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             View view = item.holder.itemView;
             view.setTranslationY(0);
             view.setTranslationX(0);
-            dispatchMoveFinished(item.holder);
+            //dispatchMoveFinished(item.holder);
             mPendingMoves.remove(i);
         }
         count = mPendingRemovals.size();
         for (int i = count - 1; i >= 0; i--) {
             ViewHolder item = mPendingRemovals.get(i);
-            dispatchRemoveFinished(item);
+            //dispatchRemoveFinished(item);
             mPendingRemovals.remove(i);
         }
         count = mPendingAdditions.size();
@@ -524,7 +524,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
             ViewHolder item = mPendingAdditions.get(i);
             //View view = item.itemView;
             reset(item.itemView);
-            dispatchAddFinished(item);
+            //dispatchAddFinished(item);
             mPendingAdditions.remove(i);
         }
         count = mPendingChanges.size();
@@ -546,7 +546,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                 View view = item.itemView;
                 view.setTranslationY(0);
                 view.setTranslationX(0);
-                dispatchMoveFinished(moveInfo.holder);
+                //dispatchMoveFinished(moveInfo.holder);
                 moves.remove(j);
                 if (moves.isEmpty()) {
                     mMovesList.remove(moves);
@@ -561,7 +561,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                 ViewHolder item = additions.get(j);
                 View view = item.itemView;
                 view.setAlpha(1);
-                dispatchAddFinished(item);
+                //dispatchAddFinished(item);
                 additions.remove(j);
                 if (additions.isEmpty()) {
                     mAdditionsList.remove(additions);
@@ -641,7 +641,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
 
         @Override
         public void onAnimationStart(Animator animation) {
-            dispatchAddStarting(mViewHolder);
+            //dispatchAddStarting(mViewHolder);
         }
 
         @Override
@@ -658,7 +658,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                 View view = (View)((ObjectAnimator)animation).getTarget();
                 reset(view);
             }
-            dispatchAddFinished(mViewHolder);
+            //dispatchAddFinished(mViewHolder);
             mAddAnimations.remove(mViewHolder);
             dispatchFinishedWhenDone();
         }
@@ -674,7 +674,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
 
         @Override
         public void onAnimationStart(Animator animation) {
-            dispatchRemoveStarting(mViewHolder);
+            //dispatchRemoveStarting(mViewHolder);
         }
 
         @Override
@@ -691,7 +691,7 @@ public abstract class BaseItemAnimator extends RecyclerView.ItemAnimator {
                 View view = (View)((ObjectAnimator)animation).getTarget();
                 reset(view);
             }
-            dispatchRemoveFinished(mViewHolder);
+            //dispatchRemoveFinished(mViewHolder);
             mRemoveAnimations.remove(mViewHolder);
             dispatchFinishedWhenDone();
         }
