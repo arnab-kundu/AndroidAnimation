@@ -17,8 +17,9 @@ package edward.com.animation.effects;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import edward.com.animation.evaluators.AccelerateDecelerateEvaluator;
 import edward.com.animation.evaluators.ElasticOvershootEvaluator;
@@ -33,7 +34,7 @@ public class Flip extends EffectHasDirection {
         super(direction);
     }
 
-    public Flip(@NonNull Action action,Direction direction){
+    public Flip(@NonNull Action action, Direction direction){
         super(direction,action);
     }
 

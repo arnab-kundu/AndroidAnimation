@@ -16,7 +16,8 @@
 
 package edward.com.abslistview.util;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 /**
  * An interface for inserting items at a certain index.

@@ -17,7 +17,6 @@
 package edward.com.animation.effects;
 
 import android.animation.Animator;
-import android.support.annotation.NonNull;
 import android.view.View;
 
 import static edward.com.animation.effects.AnimPropertyName.*;

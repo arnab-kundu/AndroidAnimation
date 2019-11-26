@@ -18,12 +18,13 @@ package edward.com.abslistview;
 import android.animation.Animator;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import edward.com.abslistview.util.AnimatorUtil;
 import edward.com.abslistview.util.ListViewWrapper;
@@ -71,7 +72,7 @@ public class AnimationAdapter extends BaseAdapterDecorator {
      *
      * @param baseAdapter the BaseAdapter to wrap.
      */
-    public AnimationAdapter(@NonNull final BaseAdapter baseAdapter,@NonNull EffectHasDirection effect) {
+    public AnimationAdapter(@NonNull final BaseAdapter baseAdapter, @NonNull EffectHasDirection effect) {
         super(baseAdapter);
         this.effect = effect;
         mGridViewPossiblyMeasuring = true;

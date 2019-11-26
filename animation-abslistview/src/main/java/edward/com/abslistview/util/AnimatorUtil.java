@@ -17,7 +17,8 @@
 package edward.com.abslistview.util;
 
 import android.animation.Animator;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class AnimatorUtil {
 

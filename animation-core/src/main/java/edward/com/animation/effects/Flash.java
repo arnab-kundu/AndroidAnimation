@@ -18,8 +18,9 @@ package edward.com.animation.effects;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 public class Flash extends NoDirection{
 

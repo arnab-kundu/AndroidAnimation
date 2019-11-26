@@ -17,9 +17,10 @@
 package edward.com.animation.effects;
 
 import android.animation.Animator;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
 
 import edward.com.animation.evaluators.BaseEvaluator;
 

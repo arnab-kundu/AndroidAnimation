@@ -18,8 +18,9 @@ package edward.com.animation.effects;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import edward.com.animation.evaluators.OvershootEvaluator;
 import edward.com.animation.evaluators.WaveEvaluator;

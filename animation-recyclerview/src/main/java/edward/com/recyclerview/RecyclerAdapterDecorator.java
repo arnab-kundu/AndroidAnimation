@@ -16,9 +16,10 @@
 
 package edward.com.recyclerview;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import edward.com.animation.AnimatorManager;
 import edward.com.animation.effects.Action;

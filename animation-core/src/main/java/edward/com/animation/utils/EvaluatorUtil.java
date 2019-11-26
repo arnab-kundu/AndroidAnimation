@@ -18,7 +18,8 @@ package edward.com.animation.utils;
 
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import edward.com.animation.evaluators.BaseEvaluator;
 

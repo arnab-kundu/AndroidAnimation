@@ -19,9 +19,10 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class AdapterViewUtil {
 

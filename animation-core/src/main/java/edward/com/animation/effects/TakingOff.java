@@ -19,8 +19,9 @@ package edward.com.animation.effects;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
-import android.support.annotation.NonNull;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 
 import edward.com.animation.evaluators.BaseEvaluator;
 import edward.com.animation.evaluators.DecelerateEvaluator;

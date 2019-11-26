@@ -16,13 +16,14 @@
 
 package edward.com.animation.evaluators;
 
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 public class ForwardEvaluator extends BaseEvaluator {
 
     private BaseEvaluator evaluator;
     private float percent;
-    public ForwardEvaluator(@NonNull BaseEvaluator evaluator,float percent) {
+    public ForwardEvaluator(@NonNull BaseEvaluator evaluator, float percent) {
         this.evaluator = evaluator;
         this.percent = percent;
     }

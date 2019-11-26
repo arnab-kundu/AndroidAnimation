@@ -16,13 +16,14 @@
 
 package edward.com.animation;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.LayoutAnimationController;
 import android.view.animation.TranslateAnimation;
+
+import androidx.annotation.NonNull;
 
 import java.util.HashMap;
 
@@ -37,7 +38,7 @@ public class ViewGroupControl {
     private boolean isReverse = false;
     private final static long START_DELAY = 500;
 
-    private ViewGroupControl(@NonNull ViewGroup target,long startDelay){
+    private ViewGroupControl(@NonNull ViewGroup target, long startDelay){
         this.target = target;
         this.startDelay = startDelay;
     }
